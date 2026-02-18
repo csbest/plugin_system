@@ -1,0 +1,3 @@
+check_interval: 1000
+monitor_path: /
+sim_cpu_load: 60

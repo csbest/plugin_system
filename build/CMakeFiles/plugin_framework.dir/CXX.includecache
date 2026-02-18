@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/PluginAPI.h
+cstdint
+-
+functional
+-
+memory
+-
+string
+-
+
+../include/PluginManager.h
+PluginAPI.h
+../include/PluginAPI.h
+mutex
+-
+string
+-
+unordered_map
+-
+vector
+-
+
+/home/aa/c++/sharpa_plugin_framework/src/PluginManager.cpp
+PluginManager.h
+/home/aa/c++/sharpa_plugin_framework/src/PluginManager.h
+dlfcn.h
+-
+iostream
+-
+

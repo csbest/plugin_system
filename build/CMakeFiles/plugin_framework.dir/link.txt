@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libplugin_framework.so -o lib/libplugin_framework.so CMakeFiles/plugin_framework.dir/src/PluginManager.cpp.o CMakeFiles/plugin_framework.dir/src/SimpleConfig.cpp.o  -lpthread -ldl 

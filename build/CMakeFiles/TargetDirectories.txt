@@ -1,0 +1,5 @@
+/home/aa/c++/sharpa_plugin_framework/build/CMakeFiles/edit_cache.dir
+/home/aa/c++/sharpa_plugin_framework/build/CMakeFiles/rebuild_cache.dir
+/home/aa/c++/sharpa_plugin_framework/build/CMakeFiles/CoreMonitor.dir
+/home/aa/c++/sharpa_plugin_framework/build/CMakeFiles/main.dir
+/home/aa/c++/sharpa_plugin_framework/build/CMakeFiles/plugin_framework.dir

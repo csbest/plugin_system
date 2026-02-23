@@ -22,6 +22,7 @@
 
 ---
 
+```text
 .
 ├── README.md                 # 项目说明文件（当前文件）
 ├── config.yaml               # 配置文件（YAML格式）
@@ -53,6 +54,9 @@
 │   └── cmake_install.cmake   # 安装脚本
 └── .git/                     # Git 版本控制目录
     ├── HEAD, config, index, logs/, objects/, refs/ 等
+
+```
+
 
 ---
 

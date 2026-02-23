@@ -1,4 +1,4 @@
-# Install script for directory: /home/aa/c++/sharpa_plugin_framework
+# Install script for directory: /home/aa/c++/plugin_framework
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/aa/c++/sharpa_plugin_framework/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/aa/c++/plugin_framework/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

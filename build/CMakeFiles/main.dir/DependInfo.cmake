@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/aa/c++/sharpa_plugin_framework/main.cpp" "/home/aa/c++/sharpa_plugin_framework/build/CMakeFiles/main.dir/main.cpp.o"
+  "/home/aa/c++/plugin_framework/main.cpp" "/home/aa/c++/plugin_framework/build/CMakeFiles/main.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,7 +15,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/aa/c++/sharpa_plugin_framework/build/CMakeFiles/plugin_framework.dir/DependInfo.cmake"
+  "/home/aa/c++/plugin_framework/build/CMakeFiles/plugin_framework.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

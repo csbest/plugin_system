@@ -5,4 +5,4 @@ CMakeFiles/CoreMonitor.dir/plugins/core_monitor/src/CoreMonitorPlugin.cpp.o
  ../include/PluginAPI.h
  ../include/SimpleConfig.h
  ../plugins/core_monitor/include/CoreMonitorPlugin.h
- /home/aa/c++/sharpa_plugin_framework/plugins/core_monitor/src/CoreMonitorPlugin.cpp
+ /home/aa/c++/plugin_framework/plugins/core_monitor/src/CoreMonitorPlugin.cpp

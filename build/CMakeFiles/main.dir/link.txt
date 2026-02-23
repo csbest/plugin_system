@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/main.dir/main.cpp.o  -o bin/main  -Wl,-rpath,/home/aa/c++/sharpa_plugin_framework/build/lib lib/libplugin_framework.so -lpthread -ldl 
+/usr/bin/c++     CMakeFiles/main.dir/main.cpp.o  -o bin/main  -Wl,-rpath,/home/aa/c++/plugin_framework/build/lib lib/libplugin_framework.so -lpthread -ldl 

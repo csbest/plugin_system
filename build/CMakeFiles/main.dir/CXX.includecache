@@ -17,8 +17,6 @@ string
 -
 
 ../include/PluginManager.h
-PluginAPI.h
-../include/PluginAPI.h
 mutex
 -
 string
@@ -27,12 +25,18 @@ unordered_map
 -
 vector
 -
+dlfcn.h
+-
+iostream
+-
+PluginAPI.h
+../include/PluginAPI.h
 
-/home/aa/c++/sharpa_plugin_framework/main.cpp
-PluginManager.h
-/home/aa/c++/sharpa_plugin_framework/PluginManager.h
+/home/aa/c++/plugin_framework/main.cpp
 iostream
 -
 thread
 -
+PluginManager.h
+/home/aa/c++/plugin_framework/PluginManager.h
 

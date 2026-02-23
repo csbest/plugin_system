@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/aa/c++/sharpa_plugin_framework/include 
+CXX_INCLUDES = -I/home/aa/c++/plugin_framework/include 
 

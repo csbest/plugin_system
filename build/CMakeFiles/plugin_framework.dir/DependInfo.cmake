@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/aa/c++/sharpa_plugin_framework/src/PluginManager.cpp" "/home/aa/c++/sharpa_plugin_framework/build/CMakeFiles/plugin_framework.dir/src/PluginManager.cpp.o"
-  "/home/aa/c++/sharpa_plugin_framework/src/SimpleConfig.cpp" "/home/aa/c++/sharpa_plugin_framework/build/CMakeFiles/plugin_framework.dir/src/SimpleConfig.cpp.o"
+  "/home/aa/c++/plugin_framework/src/PluginManager.cpp" "/home/aa/c++/plugin_framework/build/CMakeFiles/plugin_framework.dir/src/PluginManager.cpp.o"
+  "/home/aa/c++/plugin_framework/src/SimpleConfig.cpp" "/home/aa/c++/plugin_framework/build/CMakeFiles/plugin_framework.dir/src/SimpleConfig.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

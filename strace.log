@@ -1,2 +1,0 @@
-25291 --- SIGSEGV {si_signo=SIGSEGV, si_code=SEGV_MAPERR, si_addr=0x31f} ---
-25291 +++ killed by SIGSEGV (core dumped) +++

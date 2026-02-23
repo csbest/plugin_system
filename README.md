@@ -18,6 +18,44 @@
 
 ---
 
+## 2.项目架构
+
+---
+
+.
+├── README.md                 # 项目说明文件（当前文件）
+├── config.yaml               # 配置文件（YAML格式）
+├── main.cpp                  # 主程序入口
+├── .clang-format             # 代码格式化配置
+├── CMakeLists.txt            # CMake 构建脚本
+├── include/                  # 公共头文件
+│   ├── PluginAPI.h           # 插件接口定义
+│   ├── PluginManager.h       # 插件管理器声明
+│   └── SimpleConfig.h        # 简单配置解析器声明
+├── src/                      # 框架源码
+│   ├── PluginManager.cpp     # 插件管理器实现
+│   └── SimpleConfig.cpp      # 配置解析器实现
+├── plugins/                  # 插件目录
+│   └── core_monitor/         # 核心监控插件
+│       ├── include/
+│       │   └── CoreMonitorPlugin.h   # 插件类声明
+│       └── src/
+│           └── CoreMonitorPlugin.cpp # 插件类实现
+├── build/                    # 构建输出目录（CMake生成）
+│   ├── lib/                  # 生成的动态库
+│   │   ├── libCoreMonitor.so
+│   │   └── libplugin_framework.so
+│   ├── bin/                  # 生成的可执行文件
+│   │   └── main
+│   ├── CMakeFiles/           # CMake 临时文件（依赖、编译命令等）
+│   ├── CMakeCache.txt        # CMake 缓存
+│   ├── Makefile              # 生成的 Makefile
+│   └── cmake_install.cmake   # 安装脚本
+└── .git/                     # Git 版本控制目录
+    ├── HEAD, config, index, logs/, objects/, refs/ 等
+
+---
+
 ## 2.架构设计
 
 框架分为四个核心层级：
@@ -85,9 +123,11 @@
 
 ```bash
 git clone https://github.com/yourname/project.git
-cd project
+cd plugin_framework
 mkdir build && cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release
-make -j
+cmake .. 
+make 
+
 # 运行示例宿主程序
-./bin/main
+
+./build/bin/main

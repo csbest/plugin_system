@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aa/c++/sharpa_plugin_framework
+CMAKE_SOURCE_DIR = /home/aa/c++/plugin_framework
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aa/c++/sharpa_plugin_framework/build
+CMAKE_BINARY_DIR = /home/aa/c++/plugin_framework/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/plugin_framework.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/plugin_framework.dir/flags.make
 
 CMakeFiles/plugin_framework.dir/src/PluginManager.cpp.o: CMakeFiles/plugin_framework.dir/flags.make
 CMakeFiles/plugin_framework.dir/src/PluginManager.cpp.o: ../src/PluginManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aa/c++/sharpa_plugin_framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/plugin_framework.dir/src/PluginManager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/plugin_framework.dir/src/PluginManager.cpp.o -c /home/aa/c++/sharpa_plugin_framework/src/PluginManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aa/c++/plugin_framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/plugin_framework.dir/src/PluginManager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/plugin_framework.dir/src/PluginManager.cpp.o -c /home/aa/c++/plugin_framework/src/PluginManager.cpp
 
 CMakeFiles/plugin_framework.dir/src/PluginManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/plugin_framework.dir/src/PluginManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aa/c++/sharpa_plugin_framework/src/PluginManager.cpp > CMakeFiles/plugin_framework.dir/src/PluginManager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aa/c++/plugin_framework/src/PluginManager.cpp > CMakeFiles/plugin_framework.dir/src/PluginManager.cpp.i
 
 CMakeFiles/plugin_framework.dir/src/PluginManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/plugin_framework.dir/src/PluginManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aa/c++/sharpa_plugin_framework/src/PluginManager.cpp -o CMakeFiles/plugin_framework.dir/src/PluginManager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aa/c++/plugin_framework/src/PluginManager.cpp -o CMakeFiles/plugin_framework.dir/src/PluginManager.cpp.s
 
 CMakeFiles/plugin_framework.dir/src/SimpleConfig.cpp.o: CMakeFiles/plugin_framework.dir/flags.make
 CMakeFiles/plugin_framework.dir/src/SimpleConfig.cpp.o: ../src/SimpleConfig.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aa/c++/sharpa_plugin_framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/plugin_framework.dir/src/SimpleConfig.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/plugin_framework.dir/src/SimpleConfig.cpp.o -c /home/aa/c++/sharpa_plugin_framework/src/SimpleConfig.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aa/c++/plugin_framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/plugin_framework.dir/src/SimpleConfig.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/plugin_framework.dir/src/SimpleConfig.cpp.o -c /home/aa/c++/plugin_framework/src/SimpleConfig.cpp
 
 CMakeFiles/plugin_framework.dir/src/SimpleConfig.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/plugin_framework.dir/src/SimpleConfig.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aa/c++/sharpa_plugin_framework/src/SimpleConfig.cpp > CMakeFiles/plugin_framework.dir/src/SimpleConfig.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aa/c++/plugin_framework/src/SimpleConfig.cpp > CMakeFiles/plugin_framework.dir/src/SimpleConfig.cpp.i
 
 CMakeFiles/plugin_framework.dir/src/SimpleConfig.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/plugin_framework.dir/src/SimpleConfig.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aa/c++/sharpa_plugin_framework/src/SimpleConfig.cpp -o CMakeFiles/plugin_framework.dir/src/SimpleConfig.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aa/c++/plugin_framework/src/SimpleConfig.cpp -o CMakeFiles/plugin_framework.dir/src/SimpleConfig.cpp.s
 
 # Object files for target plugin_framework
 plugin_framework_OBJECTS = \
@@ -95,7 +95,7 @@ lib/libplugin_framework.so: CMakeFiles/plugin_framework.dir/src/PluginManager.cp
 lib/libplugin_framework.so: CMakeFiles/plugin_framework.dir/src/SimpleConfig.cpp.o
 lib/libplugin_framework.so: CMakeFiles/plugin_framework.dir/build.make
 lib/libplugin_framework.so: CMakeFiles/plugin_framework.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aa/c++/sharpa_plugin_framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library lib/libplugin_framework.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aa/c++/plugin_framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library lib/libplugin_framework.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/plugin_framework.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +108,6 @@ CMakeFiles/plugin_framework.dir/clean:
 .PHONY : CMakeFiles/plugin_framework.dir/clean
 
 CMakeFiles/plugin_framework.dir/depend:
-	cd /home/aa/c++/sharpa_plugin_framework/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aa/c++/sharpa_plugin_framework /home/aa/c++/sharpa_plugin_framework /home/aa/c++/sharpa_plugin_framework/build /home/aa/c++/sharpa_plugin_framework/build /home/aa/c++/sharpa_plugin_framework/build/CMakeFiles/plugin_framework.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/aa/c++/plugin_framework/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aa/c++/plugin_framework /home/aa/c++/plugin_framework /home/aa/c++/plugin_framework/build /home/aa/c++/plugin_framework/build /home/aa/c++/plugin_framework/build/CMakeFiles/plugin_framework.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/plugin_framework.dir/depend
 

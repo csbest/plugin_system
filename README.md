@@ -10,11 +10,10 @@
 ## 特性
 
 - **接口抽象与工厂模式** - 插件与宿主仅依赖纯虚接口，由工厂负责创建实例
-- **动态库加载** - 支持 Linux ,.so ,通过 `dlopen`/`LoadLibrary` 透明加载
-- **完善的生命周期状态机**  - UNLOADED → LOADED → INITIALIZED → RUNNING → STOPPED → UNLOADED`，异常时转入 `ERROR` 状态
+- **动态库加载** - 支持 Linux.so文件 ,通过 dlopen/LoadLibrary 透明加载
+- **完善的生命周期状态机**  - UNLOADED → LOADED → INITIALIZED → RUNNING → STOPPED → UNLOADED, 异常时转入 ERROR 状态
 - **线程安全的管理器** - 使用互斥锁保证多线程环境下插件的安全操作
 - **事件回调机制** - 插件状态变化时通过回调通知宿主，便于界面刷新或错误处理
-- **跨平台构建** - 基于 CMake,支持 Linux
 
 ---
 

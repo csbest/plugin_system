@@ -2,18 +2,22 @@
 
 ---
 
-本项目是一个轻量级、跨平台的 C++ 插件框架，支持动态库热插拔和完整的生命周期管理
+本项目是一个轻量级的 C++ 插件框架，支持动态库热插拔和完整的生命周期管理，是我为了深入理解插件化架构与动态库加载技术而设计，
 通过抽象化接口和插件工厂模式实现宿主与插件的解耦，适用于需要动态扩展功能的嵌入式或桌面应用
 
 ---
 
 ## 特性
 
-- **接口抽象与工厂模式** - 插件与宿主仅依赖纯虚接口，由工厂负责创建实例
-- **动态库加载** - 支持 Linux.so文件 ,通过 dlopen/LoadLibrary 透明加载
-- **完善的生命周期状态机**  - UNLOADED → LOADED → INITIALIZED → RUNNING → STOPPED → UNLOADED, 异常时转入 ERROR 状态
-- **线程安全的管理器** - 使用互斥锁保证多线程环境下插件的安全操作
-- **事件回调机制** - 插件状态变化时通过回调通知宿主，便于界面刷新或错误处理
+接口抽象与工厂模式：插件与宿主仅通过纯虚接口交互，由工厂负责插件实例的创建与销毁。
+
+动态库加载与符号查找：支持 Linux 动态库（.so）的运行时加载，通过 dlopen/dlsym 动态获取符号，并使用 extern "C" 避免名字修饰，确保跨编译器兼容性。
+
+严格的生命周期状态机：定义清晰的状态转换路径：UNLOADED → LOADED → INITIALIZED → RUNNING → STOPPED → UNLOADED；每个状态转换均经过合法性检查，异常时自动转入 ERROR 状态，保证插件行为可预测。
+
+线程安全的管理器：插件管理器内部使用 std::mutex 保护核心数据结构，确保多线程环境下插件的并发操作安全无竞态。
+
+事件回调机制：支持注册状态变化回调函数，插件状态变更（包括错误信息）时实时通知宿主，便于界面刷新、日志记录或错误恢复。
 
 ---
 
@@ -36,7 +40,7 @@
 │   ├── PluginManager.cpp     # 插件管理器实现
 │   └── SimpleConfig.cpp      # 配置解析器实现
 ├── plugins/                  # 插件目录
-│   └── core_monitor/         # 核心监控插件
+│   └── core_monitor/         # 核心监控插件 - 示例插件
 │       ├── include/
 │       │   └── CoreMonitorPlugin.h   # 插件类声明
 │       └── src/
@@ -120,12 +124,12 @@
 
 - C++17 编译器 (GCC 7+, Clang 5+, MSVC 2019+)
 - CMake 3.10+
-- Linux: `dlfcn.h` (系统自带)
+- Linux
 
 ### 构建与运行
 
 ```bash
-git clone https://github.com/yourname/project.git
+git clone https://github.com/csbest/plugin_system.git
 cd plugin_framework
 mkdir build && cd build
 cmake .. 
@@ -133,4 +137,4 @@ make
 
 # 运行示例宿主程序
 
-./build/bin/main
+./bin/main

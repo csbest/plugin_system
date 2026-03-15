@@ -1,7 +1,6 @@
 C++ Plugin Framework
 Lightweight • High Performance • Extensible • Plugin Architecture
 
----
 📦 Overview
 ---
 
@@ -19,12 +18,11 @@ C++ Plugin Framework 是一个 轻量级插件框架，用于学习和实践 插
 可扩展桌面应用
 模块化软件架构
 
----
 ✨ Features
 ---
 
----
 1️⃣ 插件接口抽象
+---
 插件通过 纯虚接口 (IPlugin) 与宿主通信，实现完全解耦。
 
 class IPlugin {
@@ -40,10 +38,9 @@ public:
 1.动态多态
 2.标准插件生命周期
 3.可扩展接口设计
----
 
----
 2️⃣ 工厂模式创建插件
+---
 插件通过 Factory Pattern 创建实例,避免宿主直接 new/delete 插件对象。
 
 class IPluginFactory {
@@ -62,10 +59,10 @@ using DestroyPluginFactory = void (*)(IPluginFactory*);
 1.避免内存跨模块释放
 2.插件独立控制生命周期
 3.提高稳定性
----
 
----
+
 3️⃣ 动态库加载
+---
 框架基于 Linux dlopen/dlsym 实现插件加载。
 
 void* handle = dlopen("./plugin.so", RTLD_LAZY);
@@ -80,10 +77,9 @@ extern "C"
 1.支持插件热插拔
 2.无需重新编译主程序
 3.动态扩展功能
----
 
----
 4️⃣ 插件生命周期管理
+---
 插件拥有严格的状态机管理：
 
 UNLOADED
@@ -117,10 +113,9 @@ enum class PluginState {
 1.防止非法调用
 2.状态可预测
 3.方便调试
----
 
----
 5️⃣ 线程安全插件管理
+---
 插件管理器内部使用：
 1.std::mutex
 2.std::lock_guard
@@ -139,10 +134,9 @@ void compute()
 1.多线程安全
 2.无数据竞争
 3.无死锁风险
----
 
----
 6️⃣ 事件回调机制
+---
 插件状态变化会触发回调：
 
 using PluginStateCallback = std::function<void(const std::string&, PluginState)>;
@@ -152,9 +146,7 @@ using PluginStateCallback = std::function<void(const std::string&, PluginState)>
 2.日志记录
 3.自动恢复
 4.监控系统
----
 
---
 🏗 Architecture
 ---
 
@@ -196,15 +188,15 @@ using PluginStateCallback = std::function<void(const std::string&, PluginState)>
 | Custom Plugins                                 |
 +------------------------------------------------+
 
----
 架构特点：
+---
 1.低耦合
 2.高扩展
 3.模块化设计
 
----
 📁 Project Structure
 ---
+
 .
 ├── README.md
 ├── config.yaml
@@ -230,7 +222,6 @@ using PluginStateCallback = std::function<void(const std::string&, PluginState)>
 │   └── bin/
 │       └── main
 
----
 🚀 Quick Start
 ---
 
@@ -252,13 +243,14 @@ make
 Run
 ./bin/main
 
----
 🔌 Writing Your Own Plugin
 ---
 
 实现插件只需要三步：
+---
 
 1️⃣ 实现接口
+---
 class MyPlugin : public IPlugin
 {
 public:
@@ -267,9 +259,8 @@ public:
     bool stop() override;
 };
 
----
-
 2️⃣ 实现工厂
+---
 class MyPluginFactory : public IPluginFactory
 {
 public:
@@ -279,9 +270,8 @@ public:
     }
 };
 
----
-
 3️⃣ 导出工厂函数
+---
 extern "C"
 IPluginFactory* CreatePluginFactory()
 {
@@ -294,30 +284,24 @@ void DestroyPluginFactory(IPluginFactory* factory)
     delete factory;
 }
 
----
+
 🎯 Design Goals
 ---
-
 该项目旨在深入实践以下技术：
-Plugin Architecture
-Dynamic Library Loading
-C++ Polymorphism
-RAII Memory Management
-Multithreading Safety
-Event Driven Programming
+1.Plugin Architecture
+2.Dynamic Library Loading
+3.C++ Polymorphism
+4.RAII Memory Management
+5.Multithreading Safety
+6.Event Driven Programming
 
----
 📊 Future Improvements
 ---
-
 计划新增：
-插件热更新
-插件依赖管理
-插件配置系统
-插件隔离机制
-Windows DLL 支持
-Plugin Sandbox
-
+1.插件通讯机制
+2.插件配置系统
+3.插件隔离机制
+4.Windows DLL 支持
 
 🤝 Contributing
 ---

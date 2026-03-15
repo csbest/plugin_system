@@ -318,12 +318,11 @@ Event Driven Programming
 Windows DLL 支持
 Plugin Sandbox
 
----
-🤝 Contributing
 
+🤝 Contributing
+---
 欢迎提交 PR 改进该项目,如果你有好的插件架构设计建议，欢迎讨论。
 
----
 📜 License
-
+---
 MIT License

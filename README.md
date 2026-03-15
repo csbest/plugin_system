@@ -84,7 +84,7 @@ auto createFactory =(CreatePluginFactory)dlsym(handle, "CreatePluginFactory");
 
 插件拥有严格的状态机管理：
 
-\```
+```
 UNLOADED
     ↓
 LOADED
@@ -96,7 +96,7 @@ RUNNING
 STOPPED
     ↓
 UNLOADED
-\```
+```
 
 状态异常自动进入`ERROR`, 以便于处理问题
 
@@ -217,29 +217,29 @@ PluginStateCallback = printPluginStateconst
 
 ```
 .
-├── README.md
-├── config.yaml
-├── main.cpp
-├── CMakeLists.txt
-├── include/
-│   ├── PluginAPI.h
-│   ├── PluginManager.h
-│   └── SimpleConfig.h
-├── src/
-│   ├── PluginManager.cpp
-│   └── SimpleConfig.cpp
-├── plugins/
-│   └── core_monitor/
-│       ├── include/
-│       │   └── CoreMonitorPlugin.h
-│       └── src/
-│           └── CoreMonitorPlugin.cpp
-├── build/
-│   ├── lib/
-│   │   ├── libCoreMonitor.so
-│   │   └── libplugin_framework.so
-│   └── bin/
-│       └── main
+├── README.md                 -- 项目说明文档
+├── config.yaml               -- 框架配置文件（插件扫描路径、日志级别等）
+├── main.cpp                  -- 程序入口，初始化插件管理器并加载插件
+├── CMakeLists.txt            -- 顶层 CMake 构建脚本
+├── include/                  -- 公共头文件目录
+│   ├── PluginAPI.h           -- 插件接口定义（IPlugin 基类）
+│   ├── PluginManager.h       -- 插件管理器类声明（核心）
+│   └── SimpleConfig.h        -- 简单配置解析类声明
+├── src/                      -- 框架实现源文件目录
+│   ├── PluginManager.cpp     -- 插件管理器实现
+│   └── SimpleConfig.cpp      -- 简单配置解析类实现
+├── plugins/                  -- 第三方插件存放目录
+│   └── core_monitor/         -- 示例插件：CPU/内存监控插件
+│       ├── include/          -- 插件私有头文件目录
+│       │   └── CoreMonitorPlugin.h -- 监控插件类声明
+│       └── src/              -- 插件实现源文件目录
+│           └── CoreMonitorPlugin.cpp -- 监控插件类实现
+└── build/                    -- 构建输出目录（CMake 生成）
+    ├── lib/                  -- 编译生成的库文件
+    │   ├── libCoreMonitor.so     -- 监控插件动态库
+    │   └── libplugin_framework.so -- 框架核心库
+    └── bin/                  -- 可执行文件输出目录
+        └── main              -- 主程序可执行文件
 ```
 
 
